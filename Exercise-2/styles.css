@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+/* Top Heading */
+.container-fluid .col h1 {
+    background-color: hsl(306deg 56% 17%);
+    text-align: center;
+    color: white;
+    padding: 40px;
+    margin: 0;
+    font-size: 45px;
+}
+/* End of Top Heading */
+
+/* Cover Image */
+.cover-img img{
+    height: 90vh;
+}
+
+/* Content Section */
+.container-box {
+    width: 90%;
+    margin: auto;
+}
+
+.container-box .col {
+    width: 33%;
+    display: inline-block;
+    padding: 15px;
+}
+
+.content-title {
+    font-size:xx-large;
+    font-weight: 300;
+    padding: 10px 0;
+}
+
+.col-content h5 {
+    font-weight:700;
+    font-size: 20px;
+}
+
+.content-desc {
+    font-weight: 300;
+    font-size: 20px;
+    padding: 23px 0;
+}
+
+button {
+    font-family: 'Roboto', sans;
+    background-color: hsl(322deg 69% 28%);
+    color: white;
+    padding: 10px 20PX;
+    font-size:larger;
+    border: none;
+    font-weight: 300;
+}
+
+.margin-top-50  {
+    margin-top: 50px;
+}
+/* End Of Content Section */
+
+/* Second conent */
+.container-box .col-2 {
+    width: 90%;
+    margin: auto;
+    padding: 90px 20px;
+}
+
+.col-2 h2{
+    text-align: center;
+    color: hsl(320deg 100% 26%);
+    font-weight: 300;
+    font-size: 75px;
+    padding: 40px 10px;
+}
+
+.col-2 p {
+    text-align: justify;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 42px;
+    color: #181818;
+}
+/* Second Content ends */
+
+/* footer */
+footer {
+    background-color: #7a1655;
+    color: white;
+    padding: 40px;
+}
+
+footer .container-box{
+    width: 90%;
+    margin: auto;
+}
+
+#copyright {
+    font-weight: 700;
+    font-size: 22px;
+}
+#copyright ~p{
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/* Footer ends */
