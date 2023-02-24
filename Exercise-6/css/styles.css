@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #2E2F34;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation */
+.navigation {
+    margin: auto;
+    width: 90%;
+}
+
+/* Logo */
+.logo {
+    margin-top: 65px;
+    margin-left: 4.25%;
+    height: 65px;
+}
+
+/* Account Menu */
+.account-menu {
+    position: absolute;
+    top: 7%;
+    right: 8%;
+}
+
+/* Navigation Icon */
+.nav-icon {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: #D7D7D7;
+}
+
+/* Dropdown Container */
+.dropdown-wrapper {
+    position: absolute;
+    right: 0;
+    width: 250px;
+    height: 150px;
+    display: none;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    padding: 2.5% 10% 7%;
+    list-style-type: none;
+    background-color: #EEEEEE;
+}
+
+/* Dropdown Menu Items */
+.menu-items {
+    margin-top: 15px;
+}
+
+.menu-items:hover {
+    background-color: #87B181;
+}
+
+.account-menu:hover .dropdown-wrapper {
+    display: block;
+}
+
+/* Content Container */
+.container { 
+    margin: 60px auto 150px auto;
+    width: 85%;
+}
+
+/* Rows */
+.row {
+    margin: 20px auto;
+}
+
+/* Cards */
+.card {
+    padding: 20px;
+    width: 22%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+/* Product Image Container */
+.image-container {
+    position: relative;
+    height: 375px;
+    background: #24252A;
+}
+
+/* Product Images */
+.product-image {
+    position: relative;
+    top: 26.5%;
+    height: 60%;
+    display: block;
+    margin: auto;
+}
+
+/* Favorite Icon */
+.star-icon {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: #87B181;
+}
+
+.star-icon:hover {
+    color: #24252A;
+    background-color: #87B181;
+
+}
+
+/* Product Size */
+.product-size {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: larger;
+    text-align: center;
+    line-height: 250%;
+    font-weight: 500;
+    background-color: #87B181;
+}
+
+/* Product Name */
+.product-name {
+    padding-top: 5%;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: white;
+}
+
+/* Product Price */
+.product-price {
+    padding-top: 2%;
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #979797;
+}
+
+/* Add to cart button */
+.add-to-cart {
+    padding: 3% 5%;
+    border: 1px solid #979797;
+    font-size: 15px;
+    font-weight: 600;
+    color: #979797;
+    background-color: #2E2F34;
+}
+
+.add-to-cart:hover {
+    border-color: #87B181;
+    color: #87B181;
+}
+
+/* Fixed Navigation Bar */
+.fixed-navigation {
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    padding: 30px;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    background-color: black;
+}
+
+/* Fixed Navigation Items */
+.fixed-nav-items {
+    margin: 0 3.25% 0 0;
+    display: inline;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+}
+
+.fixed-nav-items:hover {
+    color: #87B181;
+}
