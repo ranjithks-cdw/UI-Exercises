@@ -62,3 +62,11 @@
     font-size: 17px;
 }
 /* END:: Card */
+
+/* START:: Responsiveness */
+
+@media only screen and (max-width: 700px) {
+    .left-container, .right-container {
+        width: 100%;
+    }
+}
