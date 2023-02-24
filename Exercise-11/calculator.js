@@ -1,15 +1,15 @@
 let Calculator = {
-    add : function(a,b) {
-        return a+b;
+    add : function(value1,value2) {
+        return value1+value2;
     },
-    sub : function(a,b) {
-        return a-b;
+    sub : function(value1,value2) {
+        return value1-value2;
     },
-    mul : function(a,b) {
-        return a*b;
+    mul : function(value1,value2) {
+        return value1*value2;
     },
-    div : function(a,b) {
-        return a/b;
+    div : function(value1,value2) {
+        return value1/value2;
     }
 }
 
