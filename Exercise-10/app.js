@@ -10,18 +10,16 @@ console.log(2=='2');
 
 // Section 2: Play With Arrays
 // Initial Cricket Team
-cricketTeamPlayers = ["R Sharma","S Dhawan","V Kohli","S Yadhav","MS Dhoni","H Pandya","R Jadeja","R Ashwin","D Chahar","J Bumrah","Y Chahal"];
-console.log("Current Team");
-console.log(cricketTeamPlayers);
+let cricketTeamPlayers = ["R Sharma","S Dhawan","V Kohli","S Yadhav","MS Dhoni","H Pandya","R Jadeja","R Ashwin","D Chahar","J Bumrah","Y Chahal"];
+console.log("Current Team: \n"+ cricketTeamPlayers);
 
 // Removing Injured Player
-injuredPlayer = cricketTeamPlayers.shift();
+let injuredPlayer = cricketTeamPlayers.shift();
 console.log("Injured Player: " + injuredPlayer);
-console.log("Remaining Players");
-console.log(cricketTeamPlayers);
+console.log("Remaining Players: \n"+ cricketTeamPlayers);
 
 // Number of players after removing injured players
-numberOfPlayers = cricketTeamPlayers.length;
+let numberOfPlayers = cricketTeamPlayers.length;
 console.log("Number of available players: "+ numberOfPlayers);
 
 // Number of players after adding new player
@@ -30,25 +28,24 @@ console.log("Number of available players: "+ cricketTeamPlayers.length);
 
 // Sorting players
 cricketTeamPlayers.sort();
-console.log("Sorted Players List:");
-console.log(cricketTeamPlayers);
+console.log("Sorted Players List: \n"+ cricketTeamPlayers);
 
 // Assigning Jersey Numbers
-playersWithJerseyNumber = {};
-cricketTeamPlayers.map(player => playersWithJerseyNumber[player] = Math.floor(Math.random()*100));
+cricketTeamPlayers = cricketTeamPlayers.map(player => player + " - " + Math.floor(Math.random()*100));
 console.log("Player Name - Jersey Number");
-for(let player in playersWithJerseyNumber)
-    console.log(player+" - "+ playersWithJerseyNumber[player]);
+for(let player of cricketTeamPlayers)
+    console.log(player);
 
 // Uppercase Players Data
-playersDataForPrintingJersey = {};
-for(let player in playersWithJerseyNumber) {
-    upperCasePlayer = player.toUpperCase();
-    playersDataForPrintingJersey[upperCasePlayer] = playersWithJerseyNumber[player];
+let playersDataForPrintingJersey = [];
+for(let player of cricketTeamPlayers) {
+    let playerDetail = player.split(" - ");
+    playerDetail = playerDetail[0].toUpperCase() +" - "+playerDetail[1];
+    playersDataForPrintingJersey.push(playerDetail);
 }
 console.log("Player - Jersey Number");
-for(let player in playersDataForPrintingJersey)
-    console.log(player+" - "+ playersDataForPrintingJersey[player]);
+for(let player of playersDataForPrintingJersey)
+    console.log(player);
 
 // Section 3: Play With Functions
 // Display numbers from 1 to 100
@@ -61,11 +58,7 @@ numbersFromOneToHundred();
 // Display Date
 function displayDate() {
     let todayDate = new Date();
-    let year = todayDate.getFullYear();
-    let month = todayDate.getMonth();
-    let date = todayDate.getDate();
-    let formattedDate = date+"/"+month+"/"+year;
-    console.log(formattedDate);
+    console.log(todayDate.toLocaleDateString());
 }
 displayDate();
 
