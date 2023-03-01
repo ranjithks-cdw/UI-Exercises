@@ -34,6 +34,7 @@ if(Calculator.validate(value1,value2))
 else
     console.log(Calculator.validationErrorMsg);
 
+// Changing values and calling
 value1 = 'Ragnor';
 if(Calculator.validate(value1,value2))
     console.log(Calculator.add(value1,value2));
