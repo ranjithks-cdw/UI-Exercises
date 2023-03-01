@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Header Wrapper */
+.header-wrapper {
+    padding: 35px 30px;
+    background-color: #3B1C67;
+}
+
+/* Title */
+.title {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Card Wrapper */
+.card-wrapper {
+    margin: 65px 0;
+    row-gap: 15px;
+}
+
+/* Card */
+.card {
+    padding: 20px;
+    width: calc((100% - 30px)/3);
+    background-color: #4D67B4;
+    column-gap: 20px;
+}
+
+.card:nth-child(3n+2) {
+    margin: 0 15px;
+}
+
+/* Profile Image */
+.profile-image img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* Profile Details */
+.profile-details {
+    flex-flow: column;
+    justify-content: center;
+    row-gap: 2.5px;
+}
+
+/* Name */
+.name {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+/* Email */
+.email {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
