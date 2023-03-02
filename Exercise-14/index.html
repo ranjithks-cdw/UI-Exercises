@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Contents -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/styles.css" />
+
+       
+        <title>Payment Form</title>
+    </head>
+    <body>
+        <!-- START:: Header -->
+        <header>
+            <div class="header-wrapper">
+                <div class="logo-container">
+                    <img src="assets/images/Sirius_CDW_Cobranded_PMS2747.svg" alt="logo" />
+                </div>
+            </div>
+        </header>
+        <!-- END:: Header -->
+
+        <!-- START:: Main -->
+        <main>
+            <!-- START:: Container -->
+            <div class="container">
+                <!-- START:: Form -->
+                <form method="post" id="paymentForm" onsubmit="return validateInputForm()" novalidate>
+                    <!-- START:: Section -->
+                    <section>
+                        <div class="section-wrapper">
+                            <h5 class="section-title">BILLING DETAILS</h5>
+                            <!-- START:: Row -->
+                            <div class="row">
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <label for="firstName" class="input-title">First Name</label>
+                                    <input type="text" name="firstName" id="firstName">
+                                    <p class="error-message" id="firstNameError"></p>
+                                </div>
+
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <label for="lastName" class="input-title">Last Name</label>
+                                    <input type="text" name="lastName" id="lastName">
+                                    <p class="error-message" id="lastNameError"></p>
+                                </div>
+                            </div>
+                            <!-- END:: Row -->
+
+                            <!-- START:: Row -->
+                            <div class="row">
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <label for="email" class="input-title">Email Address</label>
+                                    <input type="email" name="email" id="email">
+                                    <p class="error-message" id="emailError"></p>
+                                </div>
+                            </div>
+                            <!-- END:: Row -->
+
+                            <!-- START:: Row -->
+                            <div class="row">
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <label for="contactNumber" class="input-title">Contact Number</label>
+                                    <input type="tel" name="contactNumber" id="contactNumber">
+                                    <p class="error-message" id="contactNumberError"></p>
+                                </div>
+                            </div>
+                            <!-- END:: Row -->
+
+                            <!-- START:: Row -->
+                            <div class="row">
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <label for="pinCode" class="input-title">PIN Code</label>
+                                    <input type="number" name="pinCode" id="pinCode">
+                                    <p class="error-message" id="pinCodeError"></p>
+                                </div>
+                            </div>
+                            <!-- END:: Row -->
+                        </div>
+                    </section>
+                    <!-- END:: Section -->
+
+                    <!-- START:: Section -->
+                    <section>
+                        <div class="section-wrapper">
+                            <h5 class="section-title">PAYMENT DETAILS</h5>
+                            <!-- START:: Row -->
+                            <div class="row">
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <label for="cardNumber" class="input-title">Card Number</label>
+                                    <input type="number" name="cardNumber" id="cardNumber">
+                                    <p class="error-message" id="cardNumberError"></p>
+                                </div>
+                            </div>
+                            <!-- END:: Row -->
+
+                            <!-- START:: Row -->
+                            <div class="row">
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <label for="cardExpiryYear" class="input-title">Card Expiry(Year)</label>
+                                    <input type="number" name="cardExpiryYear" id="cardExpiryYear">
+                                    <p class="error-message" id="cardExpiryYearError"></p>
+                                </div>
+
+                                <!-- Input Group -->
+                                <div class="input-group">
+                                    <label for="cvv" class="input-title">CVV</label>
+                                    <input type="number" name="cvv" id="cvv">
+                                    <p class="error-message" id="cvvError"></p>
+                                </div>
+                            </div>
+                            <!-- END:: Row -->
+                            <button type="submit" id="submitBtn">COMPLETE PAYMENT</button>
+                        </div>
+                    </section>
+                    <!-- END:: Section -->
+                </form>
+                <!-- END:: Form -->
+            </div>
+            <!-- END:: Container -->
+        </main>
+        <!-- END:: Main -->
+
+        <!-- External JS -->
+        <script src="js/app.js"></script>
+    </body>
+</html>
