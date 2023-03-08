@@ -1,0 +1,87 @@
+body {
+    overflow: hidden;
+    background-color: white;
+}
+
+.container {
+    height: 100vh;
+    text-align: center;
+}
+
+.greeting {
+    font-size: 2rem;
+}
+
+.message {
+    font-size: 1.5rem;
+}
+
+.loader {
+    position: relative;
+    left: 0;
+    width: 30%;
+    animation: 5s linear 0s infinite backwards slider;
+}
+
+.lightning-container {
+    width: 30%;
+    animation: 5s linear 0s infinite backwards lightningSpark;
+}
+
+.lightning-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hammer-container{
+    width: 25%;
+    animation: 5s linear 0s infinite backwards spinner;
+}
+
+.hammer {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Animation */
+@keyframes spinner {
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slider {
+    0% {
+        left: 0%;
+    }
+    25% {
+        left: 25%;
+    }
+    50% {
+        left: 50%;
+    }
+    75% {
+        left: 75%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes lightningSpark {
+    0%, 20%, 40%, 60%, 80% {
+        opacity: 0;
+      }
+    10%, 30%, 50%, 70%, 90% {    
+        opacity: 1;
+      }
+}
