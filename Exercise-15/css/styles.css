@@ -83,6 +83,7 @@ header {
 /* Video */
 .movie-trailer {
     width: 100%;
+    cursor: pointer;
 }
 
 .video-title {
