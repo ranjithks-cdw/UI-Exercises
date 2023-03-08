@@ -19,18 +19,11 @@ const bank = (function() {
     ];
 
     // Check Account Exists and return Index
-    const checkAccountExistsAndReturnIndex = function(cardNumber) {
-        for(let index=0;index<accounts.length;index++)
-            if(accounts[index].cardNumber==cardNumber)
-                return index;
-        return -1;
-    };
-
-    // Validate Input
-    const validateInput = function(cardNumber,pin) {
-        let accountIndex = checkAccountExistsAndReturnIndex(cardNumber);
-        return accountIndex>-1 && accounts[accountIndex].pin==pin;
-    };
+    const checkAccountExistsAndReturnIndex = function(cardNumber,pin) {
+        return accounts.findIndex(account => {
+            return account.cardNumber==cardNumber && account.pin==pin;
+        });
+    }
 
     // Handle Errors
     const handleErrors = function() {
@@ -39,9 +32,10 @@ const bank = (function() {
 
     // ATM Function
     const atm = function(cardNumber,pin,amount) {
-        if(!validateInput(cardNumber,pin))
+        console.log("ATM is accessed");
+        let accountIndex = checkAccountExistsAndReturnIndex(cardNumber,pin);
+        if(accountIndex==-1)
             return handleErrors();
-        let accountIndex = checkAccountExistsAndReturnIndex(cardNumber);
         if(amount>accounts[accountIndex].balance)
             console.log("Insufficient Balance");
         accounts[accountIndex].balance -= amount;
@@ -51,9 +45,10 @@ const bank = (function() {
 
     // CDM Function
     const cdm = function(cardNumber,pin,amount) {
-        if(!validateInput(cardNumber,pin))
+        console.log("CDM is accessed");
+        let accountIndex = checkAccountExistsAndReturnIndex(cardNumber,pin);
+        if(accountIndex==-1)
             return handleErrors();
-        let accountIndex = checkAccountExistsAndReturnIndex(cardNumber);
         accounts[accountIndex].balance += amount;
 
         console.log("Amount Deposited: "+amount+"\nCurrent Balance: "+accounts[accountIndex].balance);
