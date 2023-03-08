@@ -2,8 +2,10 @@ import { friendsObject } from './friends.js'
 
 const root = document.getElementById("main");
 
-renderHeader();
-renderMainContent();
+(function(){
+    renderHeader();
+    renderMainContent();
+})();
 
 function renderHeader() {
     // Header Tag
@@ -75,7 +77,7 @@ function getCardDOM(friend) {
     // Name
     let nameDOM = Object.assign(document.createElement("h6"), {
         className: "name",
-        textContent: friend.first_name +" "+friend.last_name,
+        textContent: `${friend.first_name} ${friend.last_name}`,
     });
     profileDetailsDOM.appendChild(nameDOM);
 
