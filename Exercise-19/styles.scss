@@ -1,0 +1,218 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap";
+@import "./defaults.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// background: $primary_backgroundColor;
+	background-color: black;
+}
+
+/* Container */
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+/* Title */
+.title {
+	@include flexContainer();
+	@include fontStyles();
+	margin-top: 5%;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 15px;
+}
+
+/* Name */
+.name {
+	margin-top: 7%;
+	font-size: 9rem;
+}
+
+/* First Name */
+.first-name {
+	font-weight: 200;
+}
+
+/* Description */
+.description {
+	margin-top: 5px;
+	font-size: 3rem;
+	@include fontStyles($secondary_textColor);
+}
+.description-highlight {
+	@include fontStyles($primary_highlightColor);
+}
+
+/* Email */
+.email {
+	font-size: 1.5rem;
+	font-weight: 600;
+	align-self: last baseline;
+	order: -1;
+	@include fontStyles();
+}
+
+/* Image Contents Styles */
+.design-images {
+	@include flexContainer("space-evenly");
+	margin-top: 12%;
+	row-gap: 40px;
+	column-gap: 40px;
+}
+.img-col {
+	width: calc((100% - 80px)/3);
+	img {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+/* Tagline */
+.tagline {
+	@include flexContainer();
+	margin-top: 7%;
+	font-size: 4rem;
+	h5 {
+		@include fontStyles($secondary_textColor);
+	}
+}
+.tag-highlight {
+	@include fontStyles($secondary_highlightColor);
+}
+
+/* Logos */
+.brand-logos {
+	@include flexContainer("space-around");
+	margin-top: 9%;
+}
+.logo {
+	text-align: center;
+	img {
+		width: 60%;
+	}
+	&:nth-child(3) {
+		margin-top: -20px;
+	}
+	&:nth-child(4) {
+		margin-top: 15px;
+	}
+	&:nth-child(6) {
+		margin-top: -15px;
+	}
+}
+
+/* Ruler */
+.ruler {
+	@include flexContainer();
+	margin-top: 16%;
+	flex-wrap: nowrap;
+}
+.line1 {
+	margin-right: 30px;
+	@include line(2%);
+}
+.line2 {
+	@include line(15%);
+}
+
+/* Social Media Icon */
+.social-icons-wrapper {
+	@include flexContainer();
+	margin-top: 7%;
+}
+.social-icons {
+	@include flexContainer();
+	width: 50px;
+	height: 50px;
+	margin: 7px;
+	align-items: center;
+	border: 1px solid $primary_textColor;
+	border-radius: 50%;
+	overflow: hidden;
+	font-size: 2rem;
+	@include fontStyles();
+}
+
+/* Footer Slogan */
+.footer-slogan {
+	padding-bottom: 50px;
+	margin-top: 5%;
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+/* Mobile View Styles */
+@media only screen and (max-width: 700px) {
+	.title {
+		margin: 0;
+	}
+	.name {
+		font-size: 3rem;
+	}
+	.description {
+		font-size: 1.75rem;
+	}
+	.email {
+		align-self: center;
+		order: 1;
+		font-size: 1.05rem;
+	}
+	.img-col {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	.tagline {
+		font-size: 2.25rem;
+		font-weight: 300;
+	}
+	.brand-logos {
+		margin-top: 75px;
+		justify-content: space-evenly;
+		row-gap: 90px;
+	}
+	.logo {
+		width: calc((100% - 50px)/2);
+		img {
+			max-width: 80%;
+		}
+		&:nth-child(2n+1) {
+			img {
+				float: left;
+			}
+		}
+		&:nth-child(2n+2) {
+			img {
+				float: right;
+			}
+		}
+		&:nth-child(3) {
+			width: 30%;
+			img {
+				margin-left: 20px;
+			}
+		}
+		&:nth-child(4) {
+			width: 60%;
+			margin-top: -5px;
+		}
+	}
+	.social-icons-wrapper {
+		flex-wrap: nowrap;
+	}
+	.social-icons {
+		margin: 10px;
+		font-size: 1.5rem;
+	}
+	.line1 {
+		width: 5%;
+		margin-right: 15px;
+	}
+	.line2 {
+		width: 30%;
+	}
+}
