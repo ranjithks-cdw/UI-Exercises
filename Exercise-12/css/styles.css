@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Header */
+.header-wrapper {
+    justify-content: space-between;
+    background-color: #AAE187;
+}
+
+/* Title */
+.title {
+    padding: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Description */
+.description {
+    padding: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.container {
+    height: 90vh;
+    background-color: #000;
+}
+
+/* Content Box */
+#content-box {
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+}
+
+/* Sections */
+.section-1, .section-2, .section-3 {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 90px;
+    display: flex;
+}
+
+.section-2 {
+    row-gap: 50px;
+}
+
+.section-3 {
+    row-gap: 30px;
+}
+
+/* Section Titles */
+.step-description, #shape-name {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.shapes {
+    column-gap: 75px;
+}
+
+/* Buttons */
+.button {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #FFF;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.start-again-button {
+    margin-top: 30px
+}
+
+/* Input */
+.inputBox {
+    width: 40%;
+    height: 10%;
+    border: 1.5px solid #FFF;
+    font-size: 2rem;
+    text-align: center;
+    color: #FFF;
+    background-color: #000;
+}
+
+/* Input spinner */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Section 3 Content */
+.shape-details {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.calculations {
+    flex-direction: column;
+    width: 500px;
+}
+
+.flex-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/* Column 1 */
+.parameter {
+    padding: 10px;
+    width: 225px;
+    background-color: #0B62D5;
+}
+
+/* Column 2 */
+.formula {
+    padding: 10px;
+    width: 150px;
+    background-color: #455E7F;
+}
+
+/* Column 3 */
+.calculated-value {
+    padding: 10px;
+    width: 175px;
+    background-color: #3388FF;
+}
+
+/* Tick */
+.fa-check {
+    font-size: 3rem;
+}
+
+/* Shape Designs */
+#circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    border: 1px solid #00987C;
+    border-radius: 50%;
+    background-color: #00987C;
+}
+
+#triangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(at 50% 0%, transparent 154deg, #FFABDC 0, #FFABDC 206deg, transparent 0);
+}
+
+#square {
+    height: 150px;
+    width: 150px;
+    background-color: #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
