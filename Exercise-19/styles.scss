@@ -5,8 +5,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	// background: $primary_backgroundColor;
-	background-color: black;
+	background-color: $primary_backgroundColor;
 }
 
 /* Container */
@@ -85,7 +84,7 @@
 
 /* Logos */
 .brand-logos {
-	@include flexContainer("space-around");
+	@include flexContainer(space-around);
 	margin-top: 9%;
 }
 .logo {
@@ -142,6 +141,7 @@
 	margin-top: 5%;
 	text-align: center;
 	font-size: 1.3rem;
+	@include fontStyles();
 }
 
 /* Mobile View Styles */

@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
+  background-color: #000;
 }
 
 /* Container */
@@ -103,7 +103,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: "space-around";
+  justify-content: space-around;
   margin-top: 9%;
 }
 
@@ -180,6 +180,8 @@
   margin-top: 5%;
   text-align: center;
   font-size: 1.3rem;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #FFF;
 }
 
 /* Mobile View Styles */
