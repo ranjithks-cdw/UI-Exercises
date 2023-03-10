@@ -73,7 +73,7 @@ function renderSection1() {
     // Content Box
     let contentBoxDOM = document.getElementById('content-box');
 
-    // Section Conents
+    // Section Contents
     let sectionContentsDOM = Object.assign(document.createElement("div"),{
         className: "flex section-1",
         id: "section-1"
@@ -133,7 +133,7 @@ function renderSection2() {
     // Content Box
     let contentBoxDOM = document.getElementById('content-box');
 
-    // Creating Section Conents
+    // Creating Section Contents
     let sectionContentsDOM = Object.assign(document.createElement("div"),{
         className: "flex section-2",
         id: "section-2"
@@ -250,17 +250,17 @@ function renderSection3(partsValue) {
     shapeDetailsDOM.appendChild(calculationsDOM);
 
     // Calculate Button
-    let calculateButtonDOM = Object.assign(document.createElement("button"),{
+    let startAgainButton = Object.assign(document.createElement("button"),{
         className: "button",
         id: "start-again-button",
         textContent: "START AGAIN"
     });
-    calculateButtonDOM.addEventListener("click",startAgainEvent);
+    startAgainButton.addEventListener("click",startAgainEvent);
 
     // Appending Created elements to Section Contents
     sectionContentsDOM.appendChild(displayShapeDOM);
     sectionContentsDOM.appendChild(shapeDetailsDOM);
-    sectionContentsDOM.appendChild(calculateButtonDOM);
+    sectionContentsDOM.appendChild(startAgainButton);
 
     // Appending Section contents to Content Box
     contentBoxDOM.appendChild(sectionContentsDOM);
@@ -377,6 +377,6 @@ function calculateEvent() {
 function startAgainEvent() {
     let section3 = document.getElementById("section-3");
     section3.remove();
-    localStorage.clear();
+    localStorage.removeItem("shape");
     renderSection1();
 }

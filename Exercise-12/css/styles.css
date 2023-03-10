@@ -4,11 +4,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 body {
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .flex {
@@ -37,14 +37,14 @@ body {
 
 .container {
     height: 90vh;
-    background-color: black;
+    background-color: #000;
 }
 
 /* Content Box */
 #content-box {
     width: 100%;
     height: 100%;
-    color: white;
+    color: #FFF;
 }
 
 /* Sections */
@@ -80,12 +80,12 @@ body {
 .button {
     padding: 10px;
     width: 200px;
-    border: 2px solid white;
+    border: 2px solid #FFF;
     border-radius: 3px;
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
-    background-color: black;
+    background-color: #000;
     cursor: pointer;
 }
 
@@ -97,11 +97,11 @@ body {
 .inputBox {
     width: 40%;
     height: 10%;
-    border: 1.5px solid white;
+    border: 1.5px solid #FFF;
     font-size: 2rem;
     text-align: center;
-    color: white;
-    background-color: black;
+    color: #FFF;
+    background-color: #000;
 }
 
 /* Input spinner */
@@ -159,23 +159,23 @@ input::-webkit-inner-spin-button {
 
 /* Shape Designs */
 #circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 150px;
     width: 150px;
     border: 1px solid #00987C;
     border-radius: 50%;
     background-color: #00987C;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #triangle {
-    width: 150px;
-    height: 150px;
-    background: conic-gradient(at 50% 0%, transparent 154deg, #FFABDC 0, #FFABDC 206deg, transparent 0);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(at 50% 0%, transparent 154deg, #FFABDC 0, #FFABDC 206deg, transparent 0);
 }
 
 #square {
