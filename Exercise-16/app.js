@@ -38,9 +38,10 @@ const bank = (function() {
             return handleErrors();
         if(amount>accounts[accountIndex].balance)
             console.log("Insufficient Balance");
-        accounts[accountIndex].balance -= amount;
+        else
+            accounts[accountIndex].balance -= amount;
 
-        console.log("Amount Withdrawn: "+amount+"\nCurrent Balance: "+accounts[accountIndex].balance);
+        console.log(`Amount Withdrawn: ${amount} \nCurrent Balance: ${accounts[accountIndex].balance}`);
     };
 
     // CDM Function
@@ -51,11 +52,11 @@ const bank = (function() {
             return handleErrors();
         accounts[accountIndex].balance += amount;
 
-        console.log("Amount Deposited: "+amount+"\nCurrent Balance: "+accounts[accountIndex].balance);
+        console.log(`Amount Deposited: ${amount}\nCurrent Balance: ${accounts[accountIndex].balance}`);
     };
 
     return {
-        atm: atm, cdm: cdm
+        atm, cdm
     };
 })();
 
